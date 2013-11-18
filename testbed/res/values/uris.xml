@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_types">video,episode,playlist,photoAlbum,game,event,poll,external,blog,image</string>
+    <string name="v2_root">http://arc.nick-q.mtvi.com/api/v2/</string>
+    <string name="asset_root">http://www.nick.com</string>
+    <string name="uri_latest">http://arc.nick-q.mtvi.com/api/v2/content-collection?apiKey=gve7v8ti&amp;types=%1$s&amp;rows=30&amp;people=%2$s&amp;series=%3$s&amp;categoryTags=%4$s</string>
+    <string name="uri_featured">http://arc.nick-q.mtvi.com/api/v2/editorial-content-collection/grid/featured?apiKey=gve7v8ti</string>
+    <string name="uri_tallies">http://funnel.mtvnservices.com/api/v2/nick.com/collections/</string>
+    <string name="uri_editorial_content_categories">http://arc.nick-q.mtvi.com/api/v2/editorial-content-categories/stars?apiKey=gve7v8ti</string>
+    <string name="uri_content_categories">http://arc.nick-q.mtvi.com/api/v2/content-categories/groups?apiKey=gve7v8ti</string>
+    <string name="uri_content_item">http://arc.nick-q.mtvi.com/api/%1$s?apiKey=gve7v8ti&amp;urlKey=%2$s</string>
+</resources>

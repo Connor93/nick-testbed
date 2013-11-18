@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              >
+
+    <org.andengine.opengl.view.RenderSurfaceView
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:id="@+id/surfaceView"
+        />
+    <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/surfaceView"
+            android:id="@+id/linear_layout">
+        <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/question"
+                android:gravity="center"
+                android:text="How long are you going to test this thing?"
+                android:textSize="18sp"
+                />
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="max_network_threads">4</integer>
+    <integer name="network_keepalive_ms">30000</integer>
+
+    <integer name="max_disk_threads">1</integer>
+    <integer name="disk_keepalive_ms">100000</integer>
+
+    <integer name="max_long_running_threads">50</integer>
+    <integer name="long_running_keepalive_ms">1000</integer>
+
+    <integer name="max_intensive_threads">4</integer> <!-- TODO: This should delegate to (number of CPUs-1), min 1 -->
+    <integer name="intensive_keepalive_ms">1000</integer>
+
+    <integer name="task_chain_builder_pool_size">1</integer>
+
+    <integer name="batch_content_update_interval_min">60</integer> <!-- Timeout between batch (not delta) updates -->
+
+    <integer name="ram_running_cache_limit_percentage">70</integer> <!-- fill to 70% of available memory, then start tossing -->
+    <integer name="ram_stopped_cache_limit_percentage">0</integer> <!-- Don't keep anything in memory when app is paused -->
+    <integer name="ram_created_cache_fill_percentage">40</integer> <!-- Prefill from disk up to 40% of available memory on application start -->
+    <integer name="ram_resumed_cache_fill_percentage">40</integer> <!-- Prefill from disk up to 40% of available memory on resume -->
+</resources>

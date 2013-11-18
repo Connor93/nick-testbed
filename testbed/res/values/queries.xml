@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="query_latest">
+        SELECT DISTINCT ci._id, ci.urlKey, ci.name, ci.guid, ci.objectdataid,
+                        a._id AS assetid, a.typeid, at.name AS assettype, a.uri, a.width, a.height, a.aspectRatio
+          FROM  ContentCategory cc,
+                ContentCategoryType cct,
+                CategoryItem ccci,
+                ContentItem ci
+                  LEFT OUTER JOIN ContentItemImage cii
+                        ON ci._id = cii.contentitemid
+                  LEFT OUTER JOIN Asset a
+                        ON cii.assetid = a._id,
+                AssetType at
+          WHERE cct._id = cc.typeid
+            AND ccci.contentcategoryid = cc._id
+            AND ccci.contentitemid = ci._id
+            AND at._id = a.typeid
+            AND cct.name = \'Latest\'
+            AND at.name = \'Thumbnail\'
+    </string>
+</resources>

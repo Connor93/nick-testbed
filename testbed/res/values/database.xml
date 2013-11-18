@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="script_dir">sql</string>
+    <string name="database_name">nick-android.db</string>
+    <string name="create_script">create.sql</string>
+    <string name="upgrade_script_prefix">upgrade_</string>
+    <string name="upgrade_script_suffix">.sql</string>
+</resources>

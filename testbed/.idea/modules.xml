@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/nickapp.iml" filepath="$PROJECT_DIR$/nickapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gen-external-apklibs/~apklib-com.brightcove.player.seamless_brightcove-android-seamless-native-libs_4.0.4.iml" filepath="$PROJECT_DIR$/gen-external-apklibs/~apklib-com.brightcove.player.seamless_brightcove-android-seamless-native-libs_4.0.4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gen-external-apklibs/~apklib-com.vmn.android_tveauthcomponent_2.2.1.0.iml" filepath="$PROJECT_DIR$/gen-external-apklibs/~apklib-com.vmn.android_tveauthcomponent_2.2.1.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gen-external-apklibs/~apklib-com.vmn.android_vmn-video-player-sdk_1.26.10-20131108.150903-22.iml" filepath="$PROJECT_DIR$/gen-external-apklibs/~apklib-com.vmn.android_vmn-video-player-sdk_1.26.10-20131108.150903-22.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gen-external-apklibs/~apklib-org.andengine.gles_gles_1.0.1.iml" filepath="$PROJECT_DIR$/gen-external-apklibs/~apklib-org.andengine.gles_gles_1.0.1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gen-external-apklibs/~apklib-org.andenginephysics_physics_1.0.1.iml" filepath="$PROJECT_DIR$/gen-external-apklibs/~apklib-org.andenginephysics_physics_1.0.1.iml" />
+    </modules>
+  </component>
+</project>
+

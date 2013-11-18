@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="testflight_api_token">03e06810-4267-4a3a-84bf-e591f9f084ed</string>
+    <string name="video_player_api_token">re-1aBExtyKWHc1sCaE3j2miW4YCEyL_VcNjV8P4VgiEWf6rnPZ9OQ..</string>
+    <string name="video_player_app_name">Nick_App_Android</string>
+</resources>

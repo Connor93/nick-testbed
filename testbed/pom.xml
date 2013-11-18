@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.nickonline.android</groupId>
+    <artifactId>nickapp</artifactId>
+    <version>0.4.0-SNAPSHOT</version>
+    <packaging>apk</packaging>
+
+    <name>Nickelodeon Android App</name>
+    <description>
+        A universal Android app designed to deliver Nickelodeon content to mobile device users.
+    </description>
+
+    <parent>
+        <groupId>com.vmn.android</groupId>
+        <artifactId>bootstrap</artifactId>
+        <version>1.0.2</version>
+    </parent>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <version.jackson>2.2.2</version.jackson>
+        <project.build.source>1.6</project.build.source>
+        <project.build.target>1.6</project.build.target>
+        <maven.test.skip>false</maven.test.skip>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>vmn-android-3rdparty</id>
+            <url>http://nexus.mtvi.com/nexus/content/repositories/thirdparty/</url>
+        </repository>
+        <repository>
+            <id>vmn-android-snapshots</id>
+            <url>http://nexus.mtvi.com/nexus/content/repositories/snapshots/</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>vmn-android-releases</id>
+            <url>http://nexus.mtvi.com/nexus/content/repositories/releases/</url>
+        </repository>
+   </repositories>
+
+
+    <dependencies>
+        <!--<dependency>-->
+        <!--<groupId>com.vmn.android</groupId>-->
+        <!--<artifactId>bento-android</artifactId>-->
+        <!--<version>0.6.1</version>-->
+        <!--<type>apklib</type>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+        <!--<groupId>com.viacom.android</groupId>-->
+        <!--<artifactId>android</artifactId>-->
+        <!--<version>4.3.0.1</version>-->
+        <!--<scope>provided</scope>-->
+        <!--</dependency>-->
+        <dependency>
+            <groupId>org.andengine.gles</groupId>
+            <artifactId>gles</artifactId>
+            <version>1.0.1</version>
+            <type>apklib</type>
+        </dependency>
+
+        <dependency>
+            <groupId>org.andenginephysics</groupId>
+            <artifactId>physics</artifactId>
+            <version>1.0.1</version>
+            <type>apklib</type>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.android</groupId>
+            <artifactId>android</artifactId>
+            <version>4.0.1.2</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.android</groupId>
+            <artifactId>annotations</artifactId>
+            <version>4.1.1.4</version>
+            <scope>provided</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.google.android</groupId>
+                    <artifactId>android</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!--<dependency>-->
+            <!--<groupId>com.ludei</groupId>-->
+            <!--<artifactId>cocoonjs</artifactId>-->
+            <!--<version>1.0.1</version>-->
+        <!--</dependency>-->
+
+        <dependency>
+            <groupId>net.jcip</groupId>
+            <artifactId>jcip-annotations</artifactId>
+            <version>1.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.android</groupId>
+            <artifactId>support-v4</artifactId>
+            <version>r18</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.squareup.okhttp</groupId>
+            <artifactId>okhttp</artifactId>
+            <version>1.2.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.squareup.picasso</groupId>
+            <artifactId>picasso</artifactId>
+            <version>2.1.1</version>
+        </dependency>
+
+        <!--<dependency>-->
+            <!--<groupId>com.testflightapp</groupId>-->
+            <!--<artifactId>testflight-sdk</artifactId>-->
+            <!--<version>1.0</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>com.vmn.android</groupId>-->
+            <!--<artifactId>vmn-video-player-sdk</artifactId>-->
+            <!--<version>1.26.10-SNAPSHOT</version>-->
+            <!--<type>apklib</type>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>com.vmn.android</groupId>-->
+            <!--<artifactId>tveauthcomponent</artifactId>-->
+            <!--<version>2.2.1.0</version>-->
+            <!--<type>apklib</type>-->
+        <!--</dependency>-->
+
+        <!--
+        <dependency>
+            <groupId>com.adobe.mobile</groupId>
+            <artifactId>adobe-mobile-android</artifactId>
+            <version>4.0.0</version>
+        </dependency>
+        -->
+
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>14.0.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>${version.jackson}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${version.jackson}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.jayway.jsonpath</groupId>
+            <artifactId>json-path</artifactId>
+            <version>0.8.1</version>
+        </dependency>
+
+        <!--<dependency>-->
+            <!--<groupId>org.aspectj</groupId>-->
+            <!--<artifactId>aspectjrt</artifactId>-->
+            <!--<version>1.6.11</version>-->
+        <!--</dependency>-->
+
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>2.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.intellij</groupId>
+            <artifactId>annotations</artifactId>
+            <version>12.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.robolectric</groupId>
+            <artifactId>robolectric</artifactId>
+            <version>2.1.1</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.google.android</groupId>
+                    <artifactId>android</artifactId>
+                </exclusion>
+            </exclusions>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!--<dependency>-->
+            <!--<groupId>com.fiksu</groupId>-->
+            <!--<artifactId>fiksu-android</artifactId>-->
+            <!--<version>2.1.1</version>-->
+        <!--</dependency>-->
+
+
+        <dependency>
+            <groupId>com.google.android</groupId>
+            <artifactId>android-test</artifactId>
+            <version>2.2.1</version>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>junit</groupId>
+                    <artifactId>junit</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <defaultGoal>install</defaultGoal>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+
+                <configuration>
+                    <source>${project.build.source}</source>
+                    <target>${project.build.target}</target>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+                <artifactId>android-maven-plugin</artifactId>
+                <version>3.6.1</version>
+
+                <configuration>
+                    <sdk>
+                        <platform>14</platform>
+                    </sdk>
+                    <dexOptimize>false</dexOptimize>
+                </configuration>
+
+                <extensions>true</extensions>
+            </plugin>
+
+            <!--<plugin>-->
+                <!--<groupId>org.codehaus.mojo</groupId>-->
+                <!--<artifactId>aspectj-maven-plugin</artifactId>-->
+                <!--<version>1.4</version>-->
+
+                <!--<executions>-->
+                    <!--<execution>-->
+                        <!--<goals>-->
+                            <!--<goal>compile</goal>-->
+                            <!--<goal>test-compile</goal>-->
+                        <!--</goals>-->
+                        <!--<configuration>-->
+                            <!--<source>${project.build.source}</source>-->
+                            <!--<target>${project.build.target}</target>-->
+                            <!--<forceAjcCompile>true</forceAjcCompile>-->
+                            <!--<complianceLevel>${project.build.source}</complianceLevel>-->
+                            <!--<showWeaveInfo>false</showWeaveInfo>-->
+                            <!--<verbose>false</verbose>-->
+                        <!--</configuration>-->
+                    <!--</execution>-->
+                <!--</executions>-->
+            <!--</plugin>-->
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.2.1</version>
+                <configuration>
+                    <executable>mvn</executable>
+                    <arguments>
+                        <argument>clean</argument>
+                        <argument>install</argument>
+                        <argument>android:deploy</argument>
+                        <argument>android:run</argument>
+                        <argument>-Dmaven.test.skip=true</argument>
+                    </arguments>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.4.1</version>
+
+                <configuration>
+                    <allowTimestampedSnapshots>true</allowTimestampedSnapshots>
+                </configuration>
+            </plugin>
+
+
+        </plugins>
+
+        <sourceDirectory>src</sourceDirectory>
+    </build>
+
+    <!--<reporting>-->
+        <!--<plugins>-->
+            <!--<plugin>-->
+                <!--<groupId>org.codehaus.mojo</groupId>-->
+                <!--<artifactId>aspectj-maven-plugin</artifactId>-->
+                <!--<version>1.4</version>-->
+            <!--</plugin>-->
+        <!--</plugins>-->
+    <!--</reporting>-->
+
+    <!--<scm>-->
+        <!--<connection>scm:git:git@github.com:NickMobile/nick-android.git</connection>-->
+        <!--<developerConnection>scm:git:git@github.com:NickMobile/nick-android.git</developerConnection>-->
+        <!--<url>http://www.github.com/NickMobile/nick-android</url>-->
+        <!--<tag>HEAD</tag>-->
+    <!--</scm>-->
+
+    <profiles>
+        <profile>
+            <id>production</id>
+
+            <build>
+                <plugins>
+                    <!--<plugin>-->
+                        <!--&lt;!&ndash; Weaving and Proguard are kinda mutually exclusive &ndash;&gt;-->
+                        <!--<groupId>org.codehaus.mojo</groupId>-->
+                        <!--<artifactId>aspectj-maven-plugin</artifactId>-->
+                        <!--<version>1.4</version>-->
+
+                        <!--<executions>-->
+                            <!--<execution>-->
+                                <!--<goals>-->
+                                    <!--<goal>compile</goal>-->
+                                    <!--<goal>test-compile</goal>-->
+                                <!--</goals>-->
+                                <!--<configuration>-->
+                                    <!--<skip>true</skip>-->
+                                <!--</configuration>-->
+                            <!--</execution>-->
+                        <!--</executions>-->
+                    <!--</plugin>-->
+
+                    <plugin>
+                        <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+                        <artifactId>android-maven-plugin</artifactId>
+                        <configuration>
+                            <dexOptimize>true</dexOptimize>
+                            <!--<proguard><skip>false</skip></proguard>-->
+                            <zipalign><skip>false</skip></zipalign>
+                            <release>true</release>
+                        </configuration>
+
+                        <executions>
+                            <execution>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>manifest-update</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
+</project>

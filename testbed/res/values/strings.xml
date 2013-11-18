@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Nick</string>
+    <string name="interpolate_linear">Linear</string>
+    <string name="interpolate_overshoot">Overshoot</string>
+    <string name="interpolate_accelerate">Accelerate</string>
+    <string name="interpolate_decelerate">Decelerate</string>
+    <string name="animate">Toggle Episodes Only</string>
+    <string name="full_episode">Full Episode</string>
+    <string name="error_dialog_title">Error</string>
+    <string name="error_video_general">Error Loading Video</string>
+    <string name="main_menu_b1">EPISODES</string>
+    <string name="main_menu_b2">VIDEOS</string>
+    <string name="main_menu_b3">GAMES</string>
+    <string name="main_menu_settings">SETTINGS</string>
+    <string name="main_menu_privacy">PRIVACY</string>
+    <string name="main_menu_back">BACK TO GRID</string>
+    <string name="legal_footer_copyright">© 2013 Viacom International Inc. All Rights Reserved. Created by Stephen Hillenburg.</string>
+    <string name="legal_footer_version_label">Version</string>
+    <string name="legal_footer_version_number">dev</string>
+    <string name="settings_nav_menu_welcome">Welcome</string>
+    <string name="settings_nav_menu_preferences">Preferences</string>
+    <string name="settings_nav_menu_episodes">Episodes</string>
+    <string name="settings_nav_menu_howto">How To</string>
+    <string name="settings_welcome_title">You\'re here!</string>
+    <string name="settings_welcome_body">Welcome to the land of seriously cool and funny stuff! Watch the Nickelodeon
+        shows you love, see the videos so hilarious, you might snarf milk out your nose (ouch… but worth it), play brand
+        new games, and follow your favourite Nick stars and characters! There are TONS of surprises in store.</string>
+    <string name="settings_preferences_subtitle">PERSONALIZE YOUR EXPERIENCE</string>
+    <string name="settings_preferences_title">PREFERENCES</string>
+    <string name="settings_wifi_title">WiFi Only</string>
+    <string name="settings_wifi_description">Videos will ONLY play using a WiFi connection.</string>
+    <string name="settings_delete_favourites_title">Delete All Favorites</string>
+    <string name="settings_delete_favourites_description">Delete everything I\'ve saved and start fresh.</string>
+    <string name="settings_reset_stars_title">Reset Favorited Stars</string>
+    <string name="settings_reset_stars_description">Clear out my old favorites and make room for the new!</string>
+    <string name="settings_episodes_title">Full Episodes</string>
+    <string name="settings_episodes_sign_in">Sign in</string>
+    <string name="settings_episodes_sign_out">Sign out</string>
+    <string name="settings_howto_title">How To</string>
+    <string name="privacy_nav_menu_policy">Privacy Policy</string>
+    <string name="privacy_nav_menu_eula">EULA</string>
+    <string name="privacy_policy_title">Privacy Policy</string>
+    <string name="privacy_policy_subtitle">Privacy policy for Android App.</string>
+    <string name="privacy_eula_title">End User License</string>
+    <string name="privacy_eula_subtitle">The End User License Agreement for Android App.</string>
+    <string name="delete">Delete</string>
+    <string name="reset">Reset</string>
+    <string name="on">On</string>
+    <string name="off">Off</string>
+</resources>
