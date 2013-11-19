@@ -27,6 +27,7 @@ import org.andengine.engine.options.resolutionpolicy.RatioResolutionPolicy;
 import org.andengine.entity.modifier.LoopEntityModifier;
 import org.andengine.entity.modifier.RotationModifier;
 import org.andengine.entity.scene.Scene;
+import org.andengine.entity.scene.background.Background;
 import org.andengine.entity.sprite.Sprite;
 import org.andengine.extension.physics.box2d.PhysicsConnector;
 import org.andengine.extension.physics.box2d.PhysicsFactory;
@@ -41,6 +42,7 @@ import org.andengine.opengl.texture.region.TextureRegion;
 import org.andengine.opengl.util.GLState;
 import org.andengine.opengl.view.IRendererListener;
 import org.andengine.opengl.view.RenderSurfaceView;
+import org.andengine.util.color.Color;
 
 import javax.microedition.khronos.opengles.GL10;
 
@@ -136,8 +138,9 @@ public class PhysicsTest extends Activity implements IAccelerationListener, IRen
 
         //-----Start Setting up Scene-----
         Scene scene = new Scene();
+//        scene.setBackground(new Background(Color.TRANSPARENT));
         scene.setBackgroundEnabled(false);
-//        scene.setBackground(new Background(255,255,255));
+
         physicsWorld = new PhysicsWorld(new Vector2(0, SensorManager.GRAVITY_EARTH), false);
         scene.registerUpdateHandler(physicsWorld);
         scene.registerUpdateHandler(this);
@@ -179,6 +182,7 @@ public class PhysicsTest extends Activity implements IAccelerationListener, IRen
             @Override
             public void run() {
                 mEngine.start();
+                renderSurfaceView.clearAnimation();
             }
         });
     }
