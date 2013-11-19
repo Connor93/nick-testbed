@@ -6,6 +6,7 @@ import android.graphics.Canvas;
 import android.graphics.PixelFormat;
 import android.hardware.SensorManager;
 import android.opengl.GLES20;
+import android.opengl.GLSurfaceView;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Display;
@@ -44,14 +45,18 @@ import org.andengine.opengl.view.IRendererListener;
 import org.andengine.opengl.view.RenderSurfaceView;
 import org.andengine.util.color.Color;
 
+import java.awt.Component;
+
+import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
+import javax.swing.Renderer;
 
 /**
  * Created By: Connor Fraser
  */
-public class PhysicsTest extends Activity implements IAccelerationListener, IRendererListener, IUpdateHandler {
+public class PhysicsTest extends Activity implements IAccelerationListener, IRendererListener, IUpdateHandler, GLSurfaceView.Renderer{
     private PhysicsWorld physicsWorld;
-    private RenderSurfaceView renderSurfaceView;
+    private GLSurfaceView renderSurfaceView;
     private int cameraWidth;
     private int cameraHeight;
     protected Engine mEngine;
@@ -91,7 +96,6 @@ public class PhysicsTest extends Activity implements IAccelerationListener, IRen
         cameraWidth  = mDisplay.getWidth();
         cameraHeight = (int) (mDisplay.getHeight()*0.70);
         Camera camera = new Camera(0,0, cameraWidth, cameraHeight);
-        camera.setZClippingPlanes(-100,100);
 
         mEngine = new Engine(new EngineOptions(true, ScreenOrientation.LANDSCAPE_FIXED, new RatioResolutionPolicy(
                 cameraWidth, cameraHeight), camera));
@@ -100,11 +104,11 @@ public class PhysicsTest extends Activity implements IAccelerationListener, IRen
 
         setContentView(R.layout.physics);
 
-        renderSurfaceView = (RenderSurfaceView) findViewById(R.id.surfaceView);
-        renderSurfaceView.setEGLConfigChooser(8, 8, 8, 8, 16, 0);
-        renderSurfaceView.setRenderer(mEngine, this);
+        renderSurfaceView = (GLSurfaceView) findViewById(R.id.surfaceView);
         renderSurfaceView.setZOrderOnTop(true);
-        renderSurfaceView.getHolder().setFormat(PixelFormat.TRANSLUCENT);
+        renderSurfaceView.setEGLConfigChooser(8, 8, 8, 8, 16, 0);
+        renderSurfaceView.getHolder().setFormat(PixelFormat.RGBA_8888);
+        renderSurfaceView.setRenderer(this);
 
         onCreateGame();
     }
@@ -218,17 +222,20 @@ public class PhysicsTest extends Activity implements IAccelerationListener, IRen
         GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT);
     }
 
-//    @Override
-//    public void onUpdate(float pSecondsElapsed) {
-//        GLES20.glClearColor(0f, 0f, 0f, 0f);
-//        GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT);
-//    }
-//
-//    @Override
-//    public void reset() {
-//        GLES20.glClearColor(0f, 0f, 0f, 0f);
-//        GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT);
-//    }
+    @Override
+    public void onSurfaceCreated(GL10 gl10, EGLConfig eglConfig) {
+
+    }
+
+    @Override
+    public void onSurfaceChanged(GL10 gl10, int i, int i2) {
+
+    }
+
+    @Override
+    public void onDrawFrame(GL10 gl10) {
+
+    }
 }
 
 
