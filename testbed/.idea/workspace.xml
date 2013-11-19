@@ -37,16 +37,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad3087ed-b107-431e-88a8-e2c8cfd6e4c1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/gfx/placeholder.jpg" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__andengine_andengine_physics_e74dabe.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nickapp.iml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__andengine_andengine_c61bb62.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__andengine_andengine_c61bb62.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/nickonline/android/nickapp/ui/PhysicsTest.java" afterPath="$PROJECT_DIR$/src/com/nickonline/android/nickapp/ui/PhysicsTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="nickapp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -113,11 +104,11 @@
       <file leaf-file-name="PhysicsTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/nickonline/android/nickapp/ui/PhysicsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="210" column="13" selection-start="8829" selection-end="8829" vertical-scroll-proportion="5.3757224" vertical-offset="1290" max-vertical-offset="3690">
+            <state line="146" column="66" selection-start="6196" selection-end="6196" vertical-scroll-proportion="0.6069364" vertical-offset="1980" max-vertical-offset="3690">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#7969#8096#0" expanded="true" />
-                <element signature="e#8085#8086#0" expanded="true" />
+                <element signature="e#7966#8093#0" expanded="true" />
+                <element signature="e#8082#8083#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -962,8 +953,8 @@
         <state line="110" column="0" selection-start="4629" selection-end="4629" vertical-scroll-proportion="0.0" vertical-offset="1650" max-vertical-offset="3825">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7969#8096#0" expanded="true" />
-            <element signature="e#8085#8086#0" expanded="true" />
+            <element signature="e#7966#8093#0" expanded="true" />
+            <element signature="e#8082#8083#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1056,11 +1047,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/nickonline/android/nickapp/ui/PhysicsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="210" column="13" selection-start="8829" selection-end="8829" vertical-scroll-proportion="5.3757224" vertical-offset="1290" max-vertical-offset="3690">
+        <state line="146" column="66" selection-start="6196" selection-end="6196" vertical-scroll-proportion="0.6069364" vertical-offset="1980" max-vertical-offset="3690">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7969#8096#0" expanded="true" />
-            <element signature="e#8085#8086#0" expanded="true" />
+            <element signature="e#7966#8093#0" expanded="true" />
+            <element signature="e#8082#8083#0" expanded="true" />
           </folding>
         </state>
       </provider>

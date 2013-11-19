@@ -144,7 +144,7 @@ public class PhysicsTest extends Activity implements IAccelerationListener, IRen
         //-----End Setting up Scene------
 
         //-----Populate Scene-----------
-        Sprite tag = new Sprite(cameraWidth/2, 0, playerTextureRegion, mEngine.getVertexBufferObjectManager()){
+        Sprite tag = new Sprite(cameraWidth/2, 0, tagTextureRegion, mEngine.getVertexBufferObjectManager()){
             @Override
             protected void applyRotation(final GLState pGLState){
                 final float rotation = this.mRotation;
