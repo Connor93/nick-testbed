@@ -43,6 +43,11 @@
             <id>vmn-android-releases</id>
             <url>http://nexus.mtvi.com/nexus/content/repositories/releases/</url>
         </repository>
+        <repository>
+          <id>local-libs</id>
+          <name>local-libs</name>
+          <url>file://${project.basedir}/libs</url>
+        </repository>
    </repositories>
 
 
@@ -60,18 +65,30 @@
         <!--<version>4.3.0.1</version>-->
         <!--<scope>provided</scope>-->
         <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.andengine.gles</groupId>-->
+            <!--<artifactId>gles</artifactId>-->
+            <!--<version>1.0.1</version>-->
+            <!--<type>apklib</type>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>org.andenginephysics</groupId>-->
+            <!--<artifactId>physics</artifactId>-->
+            <!--<version>1.0.1</version>-->
+            <!--<type>apklib</type>-->
+        <!--</dependency>-->
+
         <dependency>
-            <groupId>org.andengine.gles</groupId>
-            <artifactId>gles</artifactId>
-            <version>1.0.1</version>
-            <type>apklib</type>
+            <groupId>andengine</groupId>
+            <artifactId>andengine</artifactId>
+            <version>c61bb62</version>
         </dependency>
 
         <dependency>
-            <groupId>org.andenginephysics</groupId>
-            <artifactId>physics</artifactId>
-            <version>1.0.1</version>
-            <type>apklib</type>
+            <groupId>andengine</groupId>
+            <artifactId>andengine-physics</artifactId>
+            <version>e74dabe</version>
         </dependency>
 
         <dependency>
