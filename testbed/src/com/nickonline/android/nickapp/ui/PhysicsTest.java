@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.PixelFormat;
 import android.hardware.SensorManager;
+import android.opengl.GLES20;
 import android.os.Bundle;
 import android.view.Display;
 import android.widget.ImageView;
@@ -17,6 +18,7 @@ import com.badlogic.gdx.physics.box2d.FixtureDef;
 import com.nickonline.android.nickapp.R;
 import org.andengine.engine.Engine;
 import org.andengine.engine.camera.Camera;
+import org.andengine.engine.handler.IUpdateHandler;
 import org.andengine.engine.options.EngineOptions;
 import org.andengine.engine.options.ScreenOrientation;
 import org.andengine.engine.options.resolutionpolicy.RatioResolutionPolicy;
@@ -37,7 +39,7 @@ import org.andengine.opengl.view.RenderSurfaceView;
 /**
  * Created By: Connor Fraser
  */
-public class PhysicsTest extends Activity implements IAccelerationListener, IRendererListener{
+public class PhysicsTest extends Activity implements IAccelerationListener, IRendererListener, IUpdateHandler {
     private PhysicsWorld physicsWorld;
     private RenderSurfaceView renderSurfaceView;
     private int cameraWidth;
@@ -61,13 +63,13 @@ public class PhysicsTest extends Activity implements IAccelerationListener, IRen
         linearLayout.setBackgroundResource(R.drawable.polltagfront);
         linearLayout.setOrientation(LinearLayout.VERTICAL);
 
-        TextView answer = new TextView(this);
-        answer.setText("answer goes here");
-        linearLayout.addView(answer);
-
-        ImageView answerImage = new ImageView(this);
-        answerImage.setImageResource(R.drawable.placeholder);
-        linearLayout.addView(answerImage);
+//        TextView answer = new TextView(this);
+//        answer.setText("answer goes here");
+//        linearLayout.addView(answer);
+//
+//        ImageView answerImage = new ImageView(this);
+//        answerImage.setImageResource(R.drawable.placeholder);
+//        linearLayout.addView(answerImage);
 
 
         //-------End Create a poll item----
@@ -80,18 +82,24 @@ public class PhysicsTest extends Activity implements IAccelerationListener, IRen
                 cameraWidth, cameraHeight), camera));
         mEngine.startUpdateThread();
         mEngine.enableAccelerationSensor(this, this);
+
         setContentView(R.layout.physics);
+
         renderSurfaceView = (RenderSurfaceView) findViewById(R.id.surfaceView);
         renderSurfaceView.setEGLConfigChooser(8, 8, 8, 8, 16, 0);
         renderSurfaceView.setRenderer(mEngine, this);
+        renderSurfaceView.setZOrderOnTop(true);
         renderSurfaceView.getHolder().setFormat(PixelFormat.TRANSLUCENT);
-        renderSurfaceView.setZOrderMediaOverlay(true);
+
         onCreateGame();
     }
 
     public void onCreateGame(){
+        linearLayout.measure(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        linearLayout.layout(0,0, linearLayout.getRight(), linearLayout.getBottom());
+
         //------Load Resources------
-        final Bitmap out = Bitmap.createBitmap(1024, 768, Bitmap.Config.ARGB_8888);
+        final Bitmap out = Bitmap.createBitmap(linearLayout.getMeasuredWidth(), linearLayout.getMeasuredHeight(), Bitmap.Config.ARGB_8888);
         final Canvas c = new Canvas();
         c.setBitmap(out);
         linearLayout.draw(c);
@@ -103,9 +111,10 @@ public class PhysicsTest extends Activity implements IAccelerationListener, IRen
 
         //-----Start Setting up Scene-----
         Scene scene = new Scene();
-        scene.setBackground(new Background(255,255,255));
+//        scene.setBackground(new Background(255,255,255));
         physicsWorld = new PhysicsWorld(new Vector2(0, SensorManager.GRAVITY_EARTH), false);
         scene.registerUpdateHandler(physicsWorld);
+        scene.registerUpdateHandler(this);
         //-----End Setting up Scene------
 
         //-----Populate Scene-----------
@@ -148,6 +157,18 @@ public class PhysicsTest extends Activity implements IAccelerationListener, IRen
 
     @Override
     public void onSurfaceChanged(GLState pGlState, int pWidth, int pHeight) {
+    }
+
+    @Override
+    public void onUpdate(float pSecondsElapsed) {
+        GLES20.glClearColor(0f, 0f, 0f, 0f);
+        GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT);
+    }
+
+    @Override
+    public void reset() {
+        GLES20.glClearColor(0f, 0f, 0f, 0f);
+        GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT);
     }
 
 
