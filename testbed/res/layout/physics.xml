@@ -6,7 +6,21 @@
               android:layout_height="match_parent"
               android:background="@color/blue"
               >
-
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="50dp"
+        android:id="@+id/linear_layout">
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/question"
+            android:gravity="center"
+            android:text="How long are you going to test this thing?"
+            android:textSize="18sp"
+            />
+    </LinearLayout>
     <android.opengl.GLSurfaceView
             android:layout_height="match_parent"
             android:layout_width="match_parent"
@@ -14,20 +28,9 @@
             android:id="@+id/surfaceView"
         />
 
-    <LinearLayout
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_below="@id/surfaceView"
-            android:id="@+id/linear_layout">
-        <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:id="@+id/question"
-                android:gravity="center"
-                android:text="How long are you going to test this thing?"
-                android:textSize="18sp"
-                />
-    </LinearLayout>
+
+
+
 
 
 </RelativeLayout>

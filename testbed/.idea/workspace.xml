@@ -37,7 +37,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad3087ed-b107-431e-88a8-e2c8cfd6e4c1" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/nickonline/android/nickapp/ui/CustomConfigChooser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.gitignore" afterPath="$PROJECT_DIR$/../.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__andengine_andengine_c61bb62.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__andengine_andengine_c61bb62.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/nickonline/android/nickapp/ui/PhysicsTest.java" afterPath="$PROJECT_DIR$/src/com/nickonline/android/nickapp/ui/PhysicsTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/physics.xml" afterPath="$PROJECT_DIR$/res/layout/physics.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -107,12 +109,41 @@
       <file leaf-file-name="PhysicsTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/nickonline/android/nickapp/ui/PhysicsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="110" column="44" selection-start="4510" selection-end="4510" vertical-scroll-proportion="0.783237" vertical-offset="1379" max-vertical-offset="3855">
+            <state line="172" column="65" selection-start="7251" selection-end="7251" vertical-scroll-proportion="0.4851752" vertical-offset="2400" max-vertical-offset="4245">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#8171#8350#0" expanded="true" />
-                <element signature="e#8339#8340#0" expanded="true" />
+                <element signature="e#4296#4508#0" expanded="true" />
+                <element signature="e#4497#4498#0" expanded="true" />
+                <element signature="e#9256#9435#0" expanded="true" />
+                <element signature="e#9424#9425#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EngineRenderer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../andengine/AndEngine/src/org/andengine/opengl/view/EngineRenderer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="98" column="44" selection-start="3508" selection-end="3508" vertical-scroll-proportion="0.0" vertical-offset="1188" max-vertical-offset="1725">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConfigChooser.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../andengine/AndEngine/src/org/andengine/opengl/view/ConfigChooser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="310" column="63" selection-start="11960" selection-end="11960" vertical-scroll-proportion="0.0" vertical-offset="4162" max-vertical-offset="4560">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EGL10.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/khronos/opengl-api/gl1.1-android-2.1_r1/opengl-api-gl1.1-android-2.1_r1.jar!/javax/microedition/khronos/egl/EGL10.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="95" column="12" selection-start="4228" selection-end="4228" vertical-scroll-proportion="-4.96" vertical-offset="1286" max-vertical-offset="1965">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -123,25 +154,16 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="41" selection-start="541" selection-end="541" vertical-scroll-proportion="-7.2222223" vertical-offset="0" max-vertical-offset="570">
+            <state line="23" column="33" selection-start="922" selection-end="922" vertical-scroll-proportion="-6.111111" vertical-offset="180" max-vertical-offset="615">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GLSurfaceView.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Android/sources/android-14/android/opengl/GLSurfaceView.java">
+      <file leaf-file-name="RenderSurfaceView.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../andengine/AndEngine/src/org/andengine/opengl/view/RenderSurfaceView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="671" column="21" selection-start="26021" selection-end="26021" vertical-scroll-proportion="-10.423077" vertical-offset="9149" max-vertical-offset="26865">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SurfaceView.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Android/sources/android-14/android/view/SurfaceView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="0" selection-start="2272" selection-end="2272" vertical-scroll-proportion="0.0" vertical-offset="845" max-vertical-offset="1260">
+            <state line="41" column="0" selection-start="1087" selection-end="1125" vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="1425">
               <folding />
             </state>
           </provider>
@@ -165,9 +187,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/nickonline/android/nickapp/Main.java" />
-        <option value="$PROJECT_DIR$/gen-external-apklibs/org.andengine.gles_gles_1.0.1/src/org/andengine/util/ActivityUtils.java" />
-        <option value="$PROJECT_DIR$/src/com/nickonline/android/nickapp/ui/TestActivity.java" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/gen-external-apklibs/org.andenginephysics_physics_1.0.1/src/org/andengine/extension/physics/box2d/PhysicsWorld.java" />
         <option value="$PROJECT_DIR$/gen-external-apklibs/org.andengine.gles_gles_1.0.1/src/org/andengine/util/modifier/IModifier.java" />
@@ -178,6 +197,10 @@
         <option value="$PROJECT_DIR$/src/com/nickonline/android/nickapp/ui/BitmapReferenceTextureAtlasSource.java" />
         <option value="$PROJECT_DIR$/src/com/nickonline/android/nickapp/ui/BitmapReferenceTexture.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/com/nickonline/android/nickapp/ui/ConfigChooser.java" />
+        <option value="$PROJECT_DIR$/src/org/andengine/opengl/view/ConfigChooser.java" />
+        <option value="$PROJECT_DIR$/../andengine/AndEngine/src/org/andengine/opengl/view/ConfigChooser.java" />
+        <option value="$PROJECT_DIR$/src/com/nickonline/android/nickapp/ui/CustomConfigChooser.java" />
         <option value="$PROJECT_DIR$/res/layout/physics.xml" />
         <option value="$PROJECT_DIR$/src/com/nickonline/android/nickapp/ui/PhysicsTest.java" />
       </list>
@@ -558,70 +581,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nickapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="testbed" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nickapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="testbed" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drawable" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nickapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="testbed" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nickapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="testbed" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gfx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -639,6 +598,7 @@
     <property name="dynamic.classpath" value="false" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../andengine/AndEngine/src" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -651,6 +611,9 @@
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.nickonline.android.nickapp.ui" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.andengine.opengl.view" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\connor\nick-ui-tester\assets" />
@@ -921,18 +884,19 @@
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32721713" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35474452" sideWeight="0.37844408" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42813456" sideWeight="0.62074554" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38990825" sideWeight="0.62074554" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959481" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32968128" sideWeight="0.19103314" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37277147" sideWeight="0.64525545" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2504052" sideWeight="0.64525545" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42507645" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Unicode Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -940,7 +904,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32846716" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -960,35 +923,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/drawable/polltagfront.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable/pollbackground.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="11" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable/polltagfront.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="12" selection-start="622" selection-end="622" vertical-scroll-proportion="0.0" vertical-offset="182" max-vertical-offset="6195">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/andengine/andengine/c61bb62/andengine-c61bb62.jar!/org/andengine/engine/Engine.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="129" column="16" selection-start="6927" selection-end="6927" vertical-scroll-proportion="0.3469388" vertical-offset="1716" max-vertical-offset="3360">
@@ -1022,30 +956,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/andengine/andengine/c61bb62/andengine-c61bb62.jar!/org/andengine/opengl/view/RenderSurfaceView.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="168" selection-end="168" vertical-scroll-proportion="0.12479201" vertical-offset="0" max-vertical-offset="601">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/android/android/4.0.1.2/android-4.0.1.2.jar!/android/opengl/GLSurfaceView.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="157" selection-end="157" vertical-scroll-proportion="-0.7305195" vertical-offset="300" max-vertical-offset="1410">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/physics.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="41" selection-start="541" selection-end="541" vertical-scroll-proportion="-7.2222223" vertical-offset="0" max-vertical-offset="570">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Android/sources/android-14/android/view/SurfaceView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="85" column="0" selection-start="2272" selection-end="2272" vertical-scroll-proportion="0.0" vertical-offset="845" max-vertical-offset="1260">
@@ -1055,18 +965,81 @@
     </entry>
     <entry file="file://$USER_HOME$/Android/sources/android-14/android/opengl/GLSurfaceView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="671" column="21" selection-start="26021" selection-end="26021" vertical-scroll-proportion="-10.423077" vertical-offset="9149" max-vertical-offset="26865">
+        <state line="671" column="21" selection-start="26021" selection-end="26021" vertical-scroll-proportion="-0.79375" vertical-offset="9674" max-vertical-offset="26865">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/andengine/andengine/c61bb62/andengine-c61bb62.jar!/org/andengine/opengl/view/RenderSurfaceView.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="34" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../andengine/AndEngine/src/org/andengine/opengl/view/EngineRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="98" column="44" selection-start="3508" selection-end="3508" vertical-scroll-proportion="0.0" vertical-offset="1188" max-vertical-offset="1725">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../andengine/AndEngine/src/org/andengine/opengl/view/RenderSurfaceView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="0" selection-start="1087" selection-end="1125" vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="1425">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/android/android/4.0.1.2/android-4.0.1.2.jar!/android/opengl/GLSurfaceView.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="28" selection-start="2676" selection-end="2676" vertical-scroll-proportion="0.08645533" vertical-offset="885" max-vertical-offset="1410">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/khronos/opengl-api/gl1.1-android-2.1_r1/opengl-api-gl1.1-android-2.1_r1.jar!/javax/microedition/khronos/egl/EGL10.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="95" column="12" selection-start="4228" selection-end="4228" vertical-scroll-proportion="-4.96" vertical-offset="1286" max-vertical-offset="1965">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/nickonline/android/nickapp/ui/CustomConfigChooser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="301" selection-end="301" vertical-scroll-proportion="0.33333334" vertical-offset="72" max-vertical-offset="4590">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../andengine/AndEngine/src/org/andengine/opengl/view/ConfigChooser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="310" column="63" selection-start="11960" selection-end="11960" vertical-scroll-proportion="0.0" vertical-offset="4162" max-vertical-offset="4560">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/physics.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="33" selection-start="922" selection-end="922" vertical-scroll-proportion="-6.111111" vertical-offset="180" max-vertical-offset="615">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/nickonline/android/nickapp/ui/PhysicsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="44" selection-start="4510" selection-end="4510" vertical-scroll-proportion="0.783237" vertical-offset="1379" max-vertical-offset="3855">
+        <state line="172" column="65" selection-start="7251" selection-end="7251" vertical-scroll-proportion="0.4851752" vertical-offset="2400" max-vertical-offset="4245">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#8171#8350#0" expanded="true" />
-            <element signature="e#8339#8340#0" expanded="true" />
+            <element signature="e#4296#4508#0" expanded="true" />
+            <element signature="e#4497#4498#0" expanded="true" />
+            <element signature="e#9256#9435#0" expanded="true" />
+            <element signature="e#9424#9425#0" expanded="true" />
           </folding>
         </state>
       </provider>
