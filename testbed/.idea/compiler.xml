@@ -18,8 +18,8 @@
         <processorPath useClasspath="true" />
       </profile>
       <profile default="false" name="Annotation profile for nickapp" enabled="true">
-        <sourceOutputDir name="build\generated-sources\annotations" />
-        <sourceTestOutputDir name="build\generated-test-sources\test-annotations" />
+        <sourceOutputDir name="build/generated-sources/annotations" />
+        <sourceTestOutputDir name="build/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="nickapp" />

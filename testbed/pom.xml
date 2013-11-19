@@ -29,6 +29,11 @@
 
     <repositories>
         <repository>
+            <id>local-libs</id>
+            <name>local-libs</name>
+            <url>file://${project.basedir}/maven-repo</url>
+        </repository>
+        <repository>
             <id>vmn-android-3rdparty</id>
             <url>http://nexus.mtvi.com/nexus/content/repositories/thirdparty/</url>
         </repository>
@@ -42,11 +47,6 @@
         <repository>
             <id>vmn-android-releases</id>
             <url>http://nexus.mtvi.com/nexus/content/repositories/releases/</url>
-        </repository>
-        <repository>
-          <id>local-libs</id>
-          <name>local-libs</name>
-          <url>file://${project.basedir}/maven-repo</url>
         </repository>
    </repositories>
 

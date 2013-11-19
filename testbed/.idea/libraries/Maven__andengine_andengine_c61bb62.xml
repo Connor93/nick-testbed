@@ -8,7 +8,7 @@
     </JAVADOC>
     <SOURCES>
       <root url="jar://$MAVEN_REPOSITORY$/andengine/andengine/c61bb62/andengine-c61bb62-sources.jar!/" />
-      <root url="file://$PROJECT_DIR$/../../../Personal/AndEngine/src" />
+      <root url="file://$USER_HOME$/Personal/AndEngine/src" />
     </SOURCES>
   </library>
 </component>
