@@ -8,8 +8,8 @@
         <option name="CUSTOM_APK_RESOURCE_FOLDER" value="/build/generated-sources/combined-resources/res" />
         <option name="APK_PATH" value="/build/nickapp.apk" />
         <option name="RUN_PROCESS_RESOURCES_MAVEN_TASK" value="false" />
-        <option name="COMPILE_CUSTOM_GENERATED_SOURCES" value="false" />
         <includeAssetsFromLibraries>true</includeAssetsFromLibraries>
+        <option name="COMPILE_CUSTOM_GENERATED_SOURCES" value="false" />
       </configuration>
     </facet>
   </component>

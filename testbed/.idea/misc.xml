@@ -121,6 +121,9 @@
       <Port>5050</Port>
     </configuration>
   </component>
+  <component name="UnicodeBrowser">
+    <option name="fontName" value="Monospaced" />
+  </component>
   <component name="masterDetails">
     <states>
       <state key="ProjectJDKs.UI">
