@@ -8,11 +8,15 @@ import android.hardware.SensorManager;
 import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.Display;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,6 +31,9 @@ import org.andengine.engine.handler.IUpdateHandler;
 import org.andengine.engine.options.EngineOptions;
 import org.andengine.engine.options.ScreenOrientation;
 import org.andengine.engine.options.resolutionpolicy.RatioResolutionPolicy;
+import org.andengine.entity.scene.IOnAreaTouchListener;
+import org.andengine.entity.scene.IOnSceneTouchListener;
+import org.andengine.entity.scene.ITouchArea;
 import org.andengine.entity.scene.Scene;
 import org.andengine.entity.scene.background.Background;
 import org.andengine.entity.sprite.Sprite;
@@ -59,6 +66,7 @@ public class PhysicsTest extends Activity implements IAccelerationListener, IRen
     private int cameraWidth;
     private int cameraHeight;
     protected Engine mEngine;
+    private RelativeLayout contentView;
     private Bitmap bitmap;
     private LinearLayout linearLayout;
     private BitmapTextureAtlas playerTexture;
@@ -92,6 +100,7 @@ public class PhysicsTest extends Activity implements IAccelerationListener, IRen
         linearLayout.addView(answerImage);
 
 
+
         //-------End Create a poll item----
         Display mDisplay = getWindowManager().getDefaultDisplay();
         cameraWidth  = mDisplay.getWidth();
@@ -104,6 +113,7 @@ public class PhysicsTest extends Activity implements IAccelerationListener, IRen
         mEngine.enableAccelerationSensor(this, this);
 
         setContentView(R.layout.physics);
+        contentView = (RelativeLayout) findViewById(R.id.contentView);
         LinearLayout bottomText = (LinearLayout)findViewById(R.id.linear_layout);
         bottomText.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -112,19 +122,16 @@ public class PhysicsTest extends Activity implements IAccelerationListener, IRen
             }
         });
 
-//        configChooser = new CustomConfigChooser(true);
         configChooser = new ConfigChooser(false);
         renderSurfaceView = (GLSurfaceView) findViewById(R.id.surfaceView);
         renderSurfaceView.setEGLContextClientVersion(2);
         renderSurfaceView.setZOrderOnTop(true);
         renderSurfaceView.getHolder().setFormat(PixelFormat.RGBA_8888);
-//        renderSurfaceView.setEGLConfigChooser(configChooser);
         renderSurfaceView.setEGLConfigChooser(8,8,8,8,16,0);
-
         renderSurfaceView.setRenderer(new EngineRenderer(mEngine, configChooser, this));
-//        renderSurfaceView.setEnabled(false);
-//        renderSurfaceView.setFocusable(false);
-//        renderSurfaceView.setRenderer(this);
+        renderSurfaceView.setEnabled(true);
+        renderSurfaceView.setFocusable(true);
+        renderSurfaceView.setOnTouchListener(mEngine);
 
         onCreateGame();
     }
@@ -138,7 +145,6 @@ public class PhysicsTest extends Activity implements IAccelerationListener, IRen
         final Canvas c = new Canvas();
         c.setBitmap(out);
         linearLayout.draw(c);
-        renderSurfaceView.draw(c);
 
         final BitmapReferenceTexture bitmapReferenceTexture = new BitmapReferenceTexture(mEngine.getTextureManager(), null, out); // TODO: callbacks
         final TextureRegion tagTextureRegion = new TextureRegion(bitmapReferenceTexture, 0, 0, out.getWidth(), out.getHeight());
@@ -159,16 +165,33 @@ public class PhysicsTest extends Activity implements IAccelerationListener, IRen
         //-----Start Setting up Scene-----
         Scene scene = new Scene();
 
+        scene.setOnSceneTouchListener(new IOnSceneTouchListener() {
+            @Override
+            public boolean onSceneTouchEvent(Scene pScene, TouchEvent pSceneTouchEvent) {
+                //TODO: Delegate to other views below this one.
+                if(pSceneTouchEvent.isActionDown()){
+                    final ViewGroup vg = (ViewGroup) renderSurfaceView.getParent();
+                    if(vg.getChildAt(1) == renderSurfaceView){
+                        new Handler(getMainLooper()).post(new Runnable() {
+                            @Override
+                            public void run() {
+                                vg.getChildAt(0).performClick();
+                            }
+                        });
+
+                    }
+                }
+                return false;
+            }
+        });
+
         scene.setBackground(new Background(Color.TRANSPARENT));
 //        scene.setBackgroundEnabled(false);
 
-        physicsWorld = new PhysicsWorld(new Vector2(0, SensorManager.GRAVITY_EARTH), false);
-        scene.registerUpdateHandler(physicsWorld);
-        scene.registerUpdateHandler(this);
         //-----End Setting up Scene------
 
         //-----Populate Scene-----------
-        Sprite tag = new Sprite(cameraWidth/2, 0, tagTextureRegion, mEngine.getVertexBufferObjectManager()){
+        final Sprite tag = new Sprite(cameraWidth/2, 0, tagTextureRegion, mEngine.getVertexBufferObjectManager()){
             @Override
             protected void applyRotation(final GLState pGLState){
                 final float rotation = this.mRotation;
@@ -186,20 +209,24 @@ public class PhysicsTest extends Activity implements IAccelerationListener, IRen
             }
             @Override
             public boolean onAreaTouched(TouchEvent pEvent, float pX, float pY){
-                Toast.makeText(getApplicationContext(), "You clicked the floating thingy", Toast.LENGTH_SHORT).show();
+                Log.d("Connor", "Do I ever get friggen called?");
+//                Toast.makeText(getApplicationContext(), "You clicked the floating thingy", Toast.LENGTH_SHORT).show();
                 return true;
             }
         };
+        scene.registerTouchArea(tag);
+        scene.attachChild(tag);
         //tag.registerEntityModifier(new LoopEntityModifier(new RotationModifier(1,0,360)));
         final FixtureDef TAG_DEF = PhysicsFactory.createFixtureDef(10.0f, 1.0f, 0.0f);
+
+        physicsWorld = new PhysicsWorld(new Vector2(0, SensorManager.GRAVITY_EARTH), false);
 
         Body body = PhysicsFactory.createBoxBody(physicsWorld, tag, BodyDef.BodyType.DynamicBody, TAG_DEF);
         body.setLinearDamping(1.0f);
         body.setAngularDamping(1.0f);
 
-        scene.registerTouchArea(tag);
-        scene.setTouchAreaBindingOnActionDownEnabled(true);
-        scene.attachChild(tag);
+        scene.registerUpdateHandler(physicsWorld);
+        scene.registerUpdateHandler(this);
         physicsWorld.registerPhysicsConnector(new PhysicsConnector(tag,body,true,false));
         //-----End Populate Scene--------
 
@@ -212,7 +239,6 @@ public class PhysicsTest extends Activity implements IAccelerationListener, IRen
             @Override
             public void run() {
                 mEngine.start();
-                renderSurfaceView.clearAnimation();
             }
         });
     }
