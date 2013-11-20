@@ -37,11 +37,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad3087ed-b107-431e-88a8-e2c8cfd6e4c1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.gitignore" afterPath="$PROJECT_DIR$/../.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nickapp.iml" afterPath="$PROJECT_DIR$/nickapp.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/nickonline/android/nickapp/ui/PhysicsTest.java" afterPath="$PROJECT_DIR$/src/com/nickonline/android/nickapp/ui/PhysicsTest.java" />
     </list>
     <ignored path="nickapp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -105,30 +101,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PhysicsTest.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="PhysicsTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/nickonline/android/nickapp/ui/PhysicsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="177" column="64" selection-start="7590" selection-end="7590" vertical-scroll-proportion="0.0" vertical-offset="2419" max-vertical-offset="4635">
+            <state line="184" column="90" selection-start="7754" selection-end="7754" vertical-scroll-proportion="0.25139666" vertical-offset="2670" max-vertical-offset="4725">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4698#4910#0" expanded="true" />
-                <element signature="e#4899#4900#0" expanded="true" />
-                <element signature="e#6959#7743#0" expanded="true" />
-                <element signature="e#7423#7646#0" expanded="true" />
-                <element signature="e#7619#7620#0" expanded="true" />
-                <element signature="e#7732#7733#0" expanded="true" />
-                <element signature="e#10344#10471#0" expanded="true" />
-                <element signature="e#10460#10461#0" expanded="true" />
+                <element signature="e#4751#4963#0" expanded="true" />
+                <element signature="e#4952#4953#0" expanded="true" />
+                <element signature="e#6628#7412#0" expanded="true" />
+                <element signature="e#7092#7315#0" expanded="true" />
+                <element signature="e#7288#7289#0" expanded="true" />
+                <element signature="e#7401#7402#0" expanded="true" />
+                <element signature="e#10851#10978#0" expanded="true" />
+                <element signature="e#10967#10968#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="workspace.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="17520">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -210,7 +197,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/gen-external-apklibs/org.andenginephysics_physics_1.0.1/src/org/andengine/extension/physics/box2d/PhysicsWorld.java" />
         <option value="$PROJECT_DIR$/gen-external-apklibs/org.andengine.gles_gles_1.0.1/src/org/andengine/util/modifier/IModifier.java" />
         <option value="$PROJECT_DIR$/gen-external-apklibs/org.andengine.gles_gles_1.0.1/src/org/andengine/util/modifier/BaseDoubleValueChangeModifier.java" />
         <option value="$PROJECT_DIR$/gen-external-apklibs/org.andengine.gles_gles_1.0.1/src/org/andengine/entity/modifier/IEntityModifier.java" />
@@ -225,6 +211,7 @@
         <option value="$PROJECT_DIR$/src/com/nickonline/android/nickapp/ui/CustomConfigChooser.java" />
         <option value="$PROJECT_DIR$/../andengine/AndEngine/src/org/andengine/entity/shape/Shape.java" />
         <option value="$PROJECT_DIR$/res/layout/physics.xml" />
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/src/com/nickonline/android/nickapp/ui/PhysicsTest.java" />
       </list>
     </option>
@@ -614,7 +601,57 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value=".idea" />
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nickapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="testbed" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nickapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="testbed" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nickapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="testbed" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gfx" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -642,6 +679,7 @@
       <recent name="com.nickonline.android.nickapp.ui" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/res/drawable" />
       <recent name="$PROJECT_DIR$/assets/gfx" />
       <recent name="C:\connor\nick-ui-tester\assets\gfx" />
       <recent name="C:\connor\nick-ui-tester\gfx" />
@@ -928,7 +966,7 @@
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38990825" sideWeight="0.62074554" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38990825" sideWeight="0.62074554" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959481" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32968128" sideWeight="0.19103314" order="3" side_tool="false" content_ui="tabs" />
@@ -960,15 +998,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/nickonline/android/nickapp/ui/CustomConfigChooser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="301" selection-end="301" vertical-scroll-proportion="0.33333334" vertical-offset="72" max-vertical-offset="4590">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../andengine/AndEngine/src/org/andengine/opengl/view/ConfigChooser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="310" column="63" selection-start="11960" selection-end="11960" vertical-scroll-proportion="0.0" vertical-offset="4162" max-vertical-offset="4560">
@@ -1065,27 +1094,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/nickonline/android/nickapp/ui/PhysicsTest.java">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="177" column="64" selection-start="7590" selection-end="7590" vertical-scroll-proportion="0.0" vertical-offset="2419" max-vertical-offset="4635">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4698#4910#0" expanded="true" />
-            <element signature="e#4899#4900#0" expanded="true" />
-            <element signature="e#6959#7743#0" expanded="true" />
-            <element signature="e#7423#7646#0" expanded="true" />
-            <element signature="e#7619#7620#0" expanded="true" />
-            <element signature="e#7732#7733#0" expanded="true" />
-            <element signature="e#10344#10471#0" expanded="true" />
-            <element signature="e#10460#10461#0" expanded="true" />
-          </folding>
+        <state line="22" column="51" selection-start="1561" selection-end="1561" vertical-scroll-proportion="0.92178774" vertical-offset="0" max-vertical-offset="17775">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+    <entry file="file://$PROJECT_DIR$/assets/gfx/ticker_day.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/nickonline/android/nickapp/ui/PhysicsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="17520">
-          <folding />
+        <state line="184" column="90" selection-start="7754" selection-end="7754" vertical-scroll-proportion="0.25139666" vertical-offset="2670" max-vertical-offset="4725">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4751#4963#0" expanded="true" />
+            <element signature="e#4952#4953#0" expanded="true" />
+            <element signature="e#6628#7412#0" expanded="true" />
+            <element signature="e#7092#7315#0" expanded="true" />
+            <element signature="e#7288#7289#0" expanded="true" />
+            <element signature="e#7401#7402#0" expanded="true" />
+            <element signature="e#10851#10978#0" expanded="true" />
+            <element signature="e#10967#10968#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

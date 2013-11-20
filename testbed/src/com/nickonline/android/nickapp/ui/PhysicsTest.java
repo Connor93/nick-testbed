@@ -24,6 +24,7 @@ import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.FixtureDef;
+import com.badlogic.gdx.physics.box2d.joints.RevoluteJointDef;
 import com.nickonline.android.nickapp.R;
 import org.andengine.engine.Engine;
 import org.andengine.engine.camera.Camera;
@@ -31,6 +32,7 @@ import org.andengine.engine.handler.IUpdateHandler;
 import org.andengine.engine.options.EngineOptions;
 import org.andengine.engine.options.ScreenOrientation;
 import org.andengine.engine.options.resolutionpolicy.RatioResolutionPolicy;
+import org.andengine.entity.primitive.Rectangle;
 import org.andengine.entity.scene.IOnAreaTouchListener;
 import org.andengine.entity.scene.IOnSceneTouchListener;
 import org.andengine.entity.scene.ITouchArea;
@@ -87,16 +89,13 @@ public class PhysicsTest extends Activity implements IAccelerationListener, IRen
         linearLayout.setDrawingCacheEnabled(true);
         linearLayout.setBackgroundResource(R.drawable.polltagfront);
         linearLayout.setOrientation(LinearLayout.VERTICAL);
-        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(200, 450);
+        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
         linearLayout.setLayoutParams(lp);
 
 
-        TextView answer = new TextView(this);
-        answer.setText("answer goes here");
-        linearLayout.addView(answer);
 
         ImageView answerImage = new ImageView(this);
-        answerImage.setImageResource(R.drawable.placeholder);
+        answerImage.setImageResource(R.drawable.ticker_day);
         linearLayout.addView(answerImage);
 
 
@@ -150,16 +149,6 @@ public class PhysicsTest extends Activity implements IAccelerationListener, IRen
         final TextureRegion tagTextureRegion = new TextureRegion(bitmapReferenceTexture, 0, 0, out.getWidth(), out.getHeight());
         bitmapReferenceTexture.load(); // probably call this each time the tag is updated?
 
-        //Load a different resource for testing purposes.
-
-        BitmapTextureAtlasTextureRegionFactory.setAssetBasePath("gfx/");
-        playerTexture = new BitmapTextureAtlas(mEngine.getTextureManager(), 1024, 768);
-        playerTextureRegion = BitmapTextureAtlasTextureRegionFactory.createFromAsset(playerTexture, this, "placeholder.jpg",0,0);
-        playerTexture.load();
-
-
-
-
         //------End Load Resources------
 
         //-----Start Setting up Scene-----
@@ -191,22 +180,23 @@ public class PhysicsTest extends Activity implements IAccelerationListener, IRen
         //-----End Setting up Scene------
 
         //-----Populate Scene-----------
-        final Sprite tag = new Sprite(cameraWidth/2, 0, tagTextureRegion, mEngine.getVertexBufferObjectManager()){
-            @Override
-            protected void applyRotation(final GLState pGLState){
-                final float rotation = this.mRotation;
-                if(rotation != 0){
-                    final float rotationCenterX = this.mRotationCenterX;
-                    final float rotationCenterY = this.mRotationCenterY;
-                    pGLState.translateModelViewGLMatrixf(rotationCenterX, rotationCenterY, 0);
-                    pGLState.rotateModelViewGLMatrixf(rotation, 0,1,0);
-                    pGLState.translateModelViewGLMatrixf(-rotationCenterX, rotationCenterY,0);
-//                    linearLayout.measure(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-//                    linearLayout.layout(0, 0, linearLayout.getRight(), linearLayout.getBottom());
-//                    linearLayout.draw(c);
-//                    bitmapReferenceTexture.load();
-                }
-            }
+
+        //Start Sprite------------------------------
+        final Sprite tag = new Sprite(cameraWidth/2 - (tagTextureRegion.getWidth()/2), 100, tagTextureRegion, mEngine.getVertexBufferObjectManager()){
+//            protected void applyRotation(final GLState pGLState){
+//                final float rotation = this.mRotation;
+//                if(rotation != 0){
+//                    final float rotationCenterX = this.mRotationCenterX;
+//                    final float rotationCenterY = this.mRotationCenterY;
+//                    pGLState.translateModelViewGLMatrixf(rotationCenterX, rotationCenterY, 0);
+//                    pGLState.rotateModelViewGLMatrixf(rotation, 0,1,0);
+//                    pGLState.translateModelViewGLMatrixf(-rotationCenterX, rotationCenterY,0);
+////                    linearLayout.measure(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+////                    linearLayout.layout(0, 0, linearLayout.getRight(), linearLayout.getBottom());
+////                    linearLayout.draw(c);
+////                    bitmapReferenceTexture.load();
+//                }
+//            }
             @Override
             public boolean onAreaTouched(TouchEvent pEvent, float pX, float pY){
                 Log.d("Connor", "Do I ever get friggen called?");
@@ -214,20 +204,36 @@ public class PhysicsTest extends Activity implements IAccelerationListener, IRen
                 return true;
             }
         };
+        physicsWorld = new PhysicsWorld(new Vector2(0, SensorManager.GRAVITY_EARTH), false);
+        final FixtureDef TAG_DEF = PhysicsFactory.createFixtureDef(5.0f, 0.5f, 0.5f);
+        Body body = PhysicsFactory.createBoxBody(physicsWorld, tag, BodyDef.BodyType.DynamicBody, TAG_DEF);
+        body.setLinearDamping(0.3f);
+
+        //End Sprite ---------------------------------
+
+        final Rectangle greenRectangle = new Rectangle(cameraWidth/2, 0, 40, 40, mEngine.getVertexBufferObjectManager());
+        greenRectangle.setColor(Color.GREEN);
+        scene.attachChild(greenRectangle);
+
+        final Body greenBody = PhysicsFactory.createBoxBody(physicsWorld, greenRectangle, BodyDef.BodyType.StaticBody, PhysicsFactory.createFixtureDef(0, 0, 0));
+
+        //tag.registerEntityModifier(new LoopEntityModifier(new RotationModifier(1,0,360)));
+
+
+
+        final RevoluteJointDef revoluteJointDef = new RevoluteJointDef();
+        revoluteJointDef.initialize(greenBody, body, greenBody.getWorldCenter());
+//        revoluteJointDef.enableMotor = true;
+//        revoluteJointDef.motorSpeed = -1;
+//        revoluteJointDef.maxMotorTorque = 100;
+        physicsWorld.createJoint(revoluteJointDef);
+
+
         scene.registerTouchArea(tag);
         scene.attachChild(tag);
-        //tag.registerEntityModifier(new LoopEntityModifier(new RotationModifier(1,0,360)));
-        final FixtureDef TAG_DEF = PhysicsFactory.createFixtureDef(10.0f, 1.0f, 0.0f);
-
-        physicsWorld = new PhysicsWorld(new Vector2(0, SensorManager.GRAVITY_EARTH), false);
-
-        Body body = PhysicsFactory.createBoxBody(physicsWorld, tag, BodyDef.BodyType.DynamicBody, TAG_DEF);
-        body.setLinearDamping(1.0f);
-        body.setAngularDamping(1.0f);
-
         scene.registerUpdateHandler(physicsWorld);
         scene.registerUpdateHandler(this);
-        physicsWorld.registerPhysicsConnector(new PhysicsConnector(tag,body,true,false));
+        physicsWorld.registerPhysicsConnector(new PhysicsConnector(tag,body,true,true));
         //-----End Populate Scene--------
 
         // TODO: Create scene stuff (onCreateScene from docs) set callbacks
